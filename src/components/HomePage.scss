@@ -1,0 +1,285 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  .homePage {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url("../assets/table.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .homePage__header {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .homePage__title {
+    font-size: 2.5rem;
+    color: #f39c12;
+    text-shadow: 3px 3px 5px #333;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .homePage__subtitle {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    margin-top: 10px;
+  }
+  
+  /* Image Grid Styles */
+  .homePage__image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .homePage__image {
+    width: 100%;
+    height: 300px; /* Ensures all images have the same height */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(67, 0, 224, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .homePage__image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* New Member Section */
+  .homePage__new-member {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .homePage__new-member-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .homePage__new-member-button {
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(90deg, #16a085, #1abc9c);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .homePage__new-member-button:hover {
+    background: linear-gradient(90deg, #1abc9c, #16a085);
+    transform: translateY(-3px);
+  }
+  
+  /* Existing Member Section */
+  .homePage__existing-member {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+  }
+  
+  .homePage__existing-member-button {
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #e74c3c, #d35400);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .homePage__existing-member-button:hover {
+    background: linear-gradient(90deg, #d35400, #e74c3c);
+    transform: translateY(-3px);
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For Tablets and Smaller Screens */
+  @media (max-width: 768px) {
+    .homePage__new-member {
+      top: 20%;
+      right: 50%;
+      transform: translateX(50%);
+      width: 90%;
+    }
+  
+    .homePage__existing-member {
+      bottom: 20%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  
+    .homePage__image {
+      height: 250px; /* Smaller height for smaller screens */
+    }
+  
+    .homePage__title {
+      font-size: 2rem;
+    }
+  
+    .homePage__subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  /* For Mobile Phones */
+  @media (max-width: 480px) {
+    .homePage__new-member {
+      top: 25%;
+      right: 50%;
+      transform: translateX(50%);
+      width: 80%;
+    }
+  
+    .homePage__existing-member {
+      bottom: 25%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  
+    .homePage__image {
+      height: 200px; /* Even smaller height for smaller screens */
+    }
+  
+    .homePage__title {
+      font-size: 1.8rem;
+    }
+  
+    .homePage__subtitle {
+      font-size: 0.9rem;
+    }
+  }
+/* Existing Member Section */
+.homePage__existing-member {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+  }
+  
+  .homePage__existing-member-button {
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #e74c3c, #d35400);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .homePage__existing-member-button:hover {
+    background: linear-gradient(90deg, #d35400, #e74c3c);
+    transform: translateY(-3px);
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For Tablets and Smaller Screens */
+  @media (max-width: 768px) {
+    .homePage__new-member {
+      top: 20%;
+      right: 50%;
+      transform: translateX(50%);
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .homePage__existing-member {
+      bottom: 20%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  
+    .homePage__image {
+      height: 250px; /* Smaller height for smaller screens */
+    }
+  
+    .homePage__title {
+      font-size: 2rem;
+    }
+  
+    .homePage__subtitle {
+      font-size: 1rem;
+    }
+  
+    /* Move buttons below the images for mobile devices */
+    .homePage__new-member,
+    .homePage__existing-member {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+  
+  /* For Mobile Phones */
+  @media (max-width: 480px) {
+    .homePage__new-member {
+      top: 25%;
+      right: 50%;
+      transform: translateX(50%);
+      width: 80%;
+    }
+  
+    .homePage__existing-member {
+      bottom: 25%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  
+    .homePage__image {
+      height: 200px; /* Even smaller height for smaller screens */
+    }
+  
+    .homePage__title {
+      font-size: 1.8rem;
+    }
+  
+    .homePage__subtitle {
+      font-size: 0.9rem;
+    }
+  
+    /* Move buttons underneath the images on mobile screens */
+    .homePage__new-member,
+    .homePage__existing-member {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+  

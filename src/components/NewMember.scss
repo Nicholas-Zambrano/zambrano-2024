@@ -1,0 +1,36 @@
+.newMemberPage {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .newMemberPage__title {
+    font-size: 2rem;
+    color: #16a085;
+    margin-bottom: 20px;
+  }
+  
+  .newMemberPage__instructions {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 30px;
+  }
+  
+  .newMemberPage__pay-button {
+    padding: 15px 30px;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .newMemberPage__pay-button:hover {
+    background-color: #16a085;
+    transform: translateY(-3px);
+  }
+  
