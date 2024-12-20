@@ -1,0 +1,36 @@
+  
+  .pascual-img {
+    // object-position: center top; /* Center the image */
+    object-fit: cover;       /* Make sure the image fills the frame properly */
+    transform: scale(1.1);    /* Slight zoom effect */
+  }
+
+.pascual-img {
+  object-fit: cover;
+  object-position: 20% 4%; /* Moves the image down */
+}
+
+.kimbo-img {
+  object-fit: cover;
+  object-position: center 20%; /* Adjusts the vertical position */
+}
+
+.poleth-img {
+  object-fit: cover;
+  object-position: right bottom; /* Slightly moves the image down */
+}
+
+.grace-img {
+  object-fit: cover;
+  object-position: center 40%; /* Pushes the image lower */
+}
+
+.andrew-img {
+  object-fit: cover;
+  object-position: center bottom; /* Moves image to the bottom */
+}
+
+.pepe-img {
+  object-fit: cover;
+  object-position: center 50%; /* Moves image down 50% */
+}

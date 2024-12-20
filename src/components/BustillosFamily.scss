@@ -1,0 +1,25 @@
+.familyPage__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+  
+  .lorena-img {
+    object-position: center top; /* Center the image */
+    object-fit: cover;       /* Make sure the image fills the frame properly */
+    transform: scale(1.1);    /* Slight zoom effect */
+  }
+  
+  .alison-img {
+    object-position: center top; /* Center the image */
+    object-fit: cover;       /* Make sure the image fills the frame properly */
+    transform: scale(1.1);    /* Slight zoom effect */
+  }
+
+  .mela-img {
+    object-position: center bottom; /* Center the image */
+    object-fit: cover;       /* Make sure the image fills the frame properly */
+    transform: scale(1.1);    /* Slight zoom effect */
+  }

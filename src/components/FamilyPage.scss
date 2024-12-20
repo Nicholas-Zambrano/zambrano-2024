@@ -1,0 +1,155 @@
+
+/* Colors & Fonts */
+$main-red: #e74c3c;
+$main-dark: #2c3e50;
+$main-white: #ffffff;
+$highlight-blue: #3498db;
+$bg-light: #f9f9f9;
+$shadow-color: rgba(0, 0, 0, 0.15);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: $main-dark;
+  background-color: $bg-light;
+}
+
+.familyPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: $bg-light;
+}
+
+.familyPage__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.familyPage__title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $main-red;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.familyPage__subtitle {
+  font-size: 1.2rem;
+  color: $main-dark;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.familyPage__photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.familyPage__member {
+  text-align: center;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.familyPage__photoFrame {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fdfdfd;
+  border: 10px solid $highlight-blue;
+  box-shadow: 0 15px 25px $shadow-color;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  perspective: 1000px;
+
+  &:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+}
+
+.familyPage__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.familyPage__name {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: $main-dark;
+  font-weight: 600;
+}
+
+.familyPage__bio {
+  list-style: none;
+  margin-top: 10px;
+
+  li {
+    font-size: 1rem;
+    color: $main-dark;
+    background: $highlight-blue;
+    padding: 8px 15px;
+    border-radius: 15px;
+    color: $main-white;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+    display: inline-block;
+  }
+}
+
+.backToFamilyButton {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: $main-white;
+  background: $main-red;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: darken($main-red, 10%);
+    transform: scale(1.1);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .familyPage__title {
+    font-size: 2.5rem;
+  }
+
+  .familyPage__photos {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
